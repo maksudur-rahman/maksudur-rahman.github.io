@@ -116,7 +116,7 @@
 }
 
 .contactme:hover{
-  color: #17B0B4;
+  color: #00796b;
   background-color: white;
 }
 /* main body */
@@ -124,7 +124,7 @@
 /* body-color */
 
 body {
-  color: #17B0B4;
+  color: #333;
   font-size: 18px;
 }
 
@@ -140,7 +140,7 @@ body {
 } */
 
 a {
-  color: #365D7E;
+  color: #004d40;
 }
 
 /* main blockqoute */
@@ -237,7 +237,7 @@ ul.side-nav li {
 
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: #17B0B4;
+  color: rgb(16, 202, 56);
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
@@ -320,7 +320,7 @@ h3 {
 } */
 
 #intro.section {
-  background: #365D7E repeat;
+  background: #a7ffeb repeat;
   position: relative;
 }
 
@@ -473,7 +473,7 @@ a.hoverline {
 } */
 
 a.hoverline:hover {
-  border-bottom: 3px solid #365D7E !important;
+  border-bottom: 3px solid #004d40 !important;
 }
 
 #skills .card.large {
