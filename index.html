@@ -1,1116 +1,1683 @@
-<!-- <!DOCTYPE html> -->
-<html lang="en">
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PGZH8HT');</script>
-  <!-- End Google Tag Manager -->
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Maksudur Rahman | Senior Mobile Engineer | Lead Mobile App Developer</title>
+	<meta name="description"
+		content="Maksudur Rahman provides world-class Mobile & Web Solutions for startups and enterprises across the USA, Europe, and Asia. Specialized in Senior Android Engineering, Flutter MVPs, and scalable digital products.">
+	<meta name="keywords"
+		content="Senior Mobile Engineer, Lead Mobile App Developer, Mobile Solutions USA, Software Engineering EU, App Development Singapore, Web Solutions Malaysia, MVP Development Japan, Flutter Expert, Sakhawat Hossain, Global Tech Consultant">
+	<meta name="author" content="Maksudur Rahman">
 
-  <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles-->
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <title>Maksudur Rahman | Software Developer</title>
+	<!-- social meta
+   ================================================== -->
+	<meta property="og:title" content="Maksudur Rahman | Global Mobile & Web Solutions">
+	<meta property="og:description"
+		content="Transforming ideas into scalable products for global markets. Expert Android & Web engineering for USA, EU, and Asia.">
+	<meta property="og:image" content="https://maksudur-rahman.github.io/images/site-preview.png">
+	<meta property="og:url" content="https://maksudur-rahman.github.io">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Maksudur Rahman | Global Mobile & Web Solutions">
+	<meta name="twitter:description"
+		content="Lead Mobile App Developer providing end-to-end digital solutions for high-growth ventures worldwide.">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    gtag('config', 'UA-126939217-2');
-  </script>
+	<!-- Structured Data
+   ================================================== -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org/",
+	  "@type": "Person",
+	  "name": "Maksudur Rahman",
+	  "jobTitle": "Senior Mobile Engineer (Android & iOS) & Solutions Architect",
+	  "alternateName": ["Lead Mobile App Developer", "Senior Mobile Engineer", "MVP Solutions Expert"],
+	  "url": "https://maksudur-rahman.github.io",
+	  "image": "https://maksudur-rahman.github.io/images/intro-bg-badge.png",
+	  "sameAs": [
+		"https://www.linkedin.com/in/maksudurrahman44/",
+		"https://github.com/maksudur-rahman"
+	  ],
+	  "knowsAbout": ["Android Development", "Flutter", "Kotlin", "Java", "Kotlin Multiplatform", "Mobile Architecture", "CI/CD", "Full-Stack Web Solutions"],
+	  "hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Software Engineering Services",
+		"itemListElement": [
+		  {
+			"@type": "Service",
+			"name": "Custom Mobile App Development",
+			"description": "High-performance Native Android and Flutter development for global markets like USA and EU."
+		  },
+		  {
+			"@type": "Service",
+			"name": "Full-Stack Web Solutions",
+			"description": "Scalable web architectures and MVP development for startups in Singapore, Malaysia, and Japan."
+		  },
+		  {
+			"@type": "Service",
+			"name": "Rapid MVP Prototyping",
+			"description": "End-to-end product development for founders, moving from idea to market-ready product with minimal effort."
+		  }
+		]
+	  }
+	}
+	</script>
 
-  <!-- Open Graph-->
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Maksudur Rahman | Software Developer" />
-  <meta property="og:description" content="Software Developer" />
-  <meta property="og:url" content="https://maksudur-rahman.github.io/" />
-  <meta property="og:site_name" content="Maksudur Rahman | Software Developer" />
-  <meta property="article:publisher" content="https://maksudur-rahman.github.io/" />
-  <meta property="og:image" content="https://maksudur-rahman.github.io/examples/preview.JPG" />
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@varad_bhogayata" />
-  <meta name="twitter:title" content="Coder | Technofreak | Explorer | Minimalist | Humane" />
-  <meta name="twitter:description" content="Software Developer" />
-  <meta name="twitter:url" content="https://twitter.com/varad_bhogayata" />
-  <meta name="author" content="Maksudur Rahman" />
-  <meta name="description" content="Software Developer with a passion for frontend and backend development." />
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="robots" content="index, follow" />
-  <!-- Google Site Verification for indexing -->
-  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/enhanced.css">
+
+
+
+	<!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<!-- Google tag (gtag.js) -->
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNXBMHBRCS"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-JNXBMHBRCS');
+	</script>
+
 </head>
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  
-  <!-- Navigation Menu-->
-  <!-- Nav class 1 -->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-
-      <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- mdi-av-web small
-             mdi-av-my-library-books small-->
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-      
-      <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        1. mdi-action-description
-        2. mdi-file-folder
-        3. mdi-file-folder-open
-        4. mdi-file-attachment
-        5. mdi-file-folder-shared
-        -->
-        <!-- <a aria-label="Open Varad's resume in a new tab" href="#resume" target="_blank"
-          onclick="window.open('https://drive.google.com/file/d/1vYi-bMyIsZPve0x_clxY8xsDtiHiOMd3/view?usp=sharing')"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a> -->
-        <a aria-label="Open Maksudur's resume in a new tab" href="https://maksudur-rahman.github.io/assets/resume/Maksudur-Rahman.pdf" target="_blank"
-        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Maksudur
-        Rahman</a><span class="black-text">Software Developer</span>
-    </div>
-  </nav>
-
-  <!-- Nav class 3 -->
-  <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Open Maksudur's Resume in a new tab"
-          href="https://drive.google.com/file/d/1B6MZ1z0-7NsefC3Lm_q-uhib28MTqpE9/view?usp=sharing" target="_blank"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Main Content-->
-  <main>
-    <!-- First Section: Heading lines and image -->
-    <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-            <div class="caption">
-              <h2>Hi, I'm <span class="teal">Maksudur Rahman.</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-              <h5>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving a complex and challenging real-world problems.</h5>
-            </div>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/maksudurrahman44/" target="_blank">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-              <a href="https://github.com/maksudur-rahman/" target="_blank">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-
-              <!-- <a href="https://angel.co/u/varad_bhogayata" target="_blank">
-                <button class="icon-btn angellist">
-                  <i class="fa fa-angellist"></i>
-                </button>
-              </a> -->
-
-              <!-- <a href="http://linkedin.com/in/varadbhogayata" target="_blank">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-
-                  </span>
-              </a> -->
-            </div>
-            <div class='buttons'>
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Second Section: About -->
-    <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
-        <!-- <blockquote>
-          <h2>
-            A Software Developer with a passion for Backend Development and Artificial Intelligence.
-
-          </h2>
-        </blockquote> -->        
-        <p>
-          Strong education professional with a Bachelor of Science (BSc) focused in Computer Science and Engineering from Jahangirnagar University.
-          I enjoy problem-solving and coding. Always strive to bring 100% to the work I do.
-
-          I have worked on technologies like Native Android, iOS, Flutter, React Native, Spring boot, MySQL, PostgreSQL, MongoDB, HTML5, CSS, Java, C++ during my bachelor's. I have 5 years of professional work experience which helped me strengthen my experience in Android, iOS, Flutter, Flask, and Django.
-
-          I am passionate about developing complex applications that solve real-world problems impacting millions of users.
-        </p>
-        <p>
-          <ul>
-            <li><b>Languages:</b> Java, Objectice C, Dart, ReactJS, Python, Kotlin, JavaScript, C, C++, HTML/CSS, Bash</li>
-            <li><b>Databases:</b> MySQL, PostgreSQL, MongoDB</li>
-            <li><b>Libraries:</b> Jitsi-Meet, openSRP, Android Jetpack, UIKit, OpenCV, Matrix, Element</li>
-            <li><b>Frameworks:</b> Android, Flutter, React native, Spring boot, Node.js, Bootstrap, Apache Beam</li>
-            <li><b>Tools & Technologies:</b> Git, Docker, AWS, GCP, Heroku, JIRA</li>
-          </ul>
-          
-        </p>
-          
-        <!-- <p>
-          
-          Detail-oriented Software Developer with professional experience in Backend Development, Machine Learning, Computer Vision. I am adept in Python, Django, Flask, SQL, Machine Learning, Computer Vision.           
-        </p> -->
-        <p>
-          Looking for an opportunity to work in a challenging position combining my skills in Software Engineering, which provides professional development, interesting experiences and personal growth.
-        </p>
-        <!-- <p>
-          Another Paragraph
-        </p>  -->
-        <!-- <p>
-        <strong>Current Focus</strong>:&nbsp;<a aria-label="Navigate to the Inclusive Design Patterns homepage"
-          href="https://www.smashingmagazine.com/inclusive-design-patterns/">Accessibility</a>&nbsp;//&nbsp;<a
-          aria-label="Navigate to the Full Stack React homepage"
-          href="https://www.fullstackreact.com/">React</a>&nbsp;//&nbsp;<a
-          aria-label='Navigate to the article "Scalable CSS"'
-          href="https://mrmrs.github.io/writing/2016/03/24/scalable-css/">Design Systems</a>
-        </p> -->
-      </div>
-    </section>
-
-
-    <!-- Third Section: Experience -->
-    <section id="experience" class="section scrollspy">
-      <h3 class="page-title white-text teal">Experience</h3>
-      <div class="container">
-
-        <!-- Latest Experience -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://synesisit.com.bd/" target="_blank"><img alt="Synesis logo"
-                    src="/assets/img/synesis_it_limited_logo.jpeg" class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://synesisit.com.bd/" target="_blank"
-                      class="teal-text hoverline">Synesis IT PLC</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Team Leader</div>
-            <ul>
-              <li>
-                Analyze, Architect, Design and Develop Applications, Implementing new technologies and framework.
-              </li>
-              <li>
-                Develop international standard mobile and web application using Java, Kotlin, Dart, C#.Net 3.5/4.0.
-              </li>
-              <li>Improved the response time by 20% by refactoring the codebase and changing database design and queries.</li>
-              <li>Excellent capability to translate complex client requirement to technical implementation.
-                Able to write quality coding with optimization guideline.</li>
-              <li>
-                <b>Tools:</b> Software Design Patterns · iOS Development · Ionic Framework · React Native · Android Development · Spring Boot · Leadership · Team Management · Flutter
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>October 2021 - Present | Dhaka, Bangladesh</span>
-          </div>
-        </div>
-
-        
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://www.mpower-social.com/" target="_blank"><img alt="mPower logo"
-                    src="/assets/img/mpower.jpeg" class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://www.mpower-social.com/" target="_blank"
-                      class="teal-text hoverline">mPower Social Enterprises Ltd.</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">
-              Software Engineer</div>
-            <ul>
-              <li>
-                Design and build advanced applications for Android and IOS platforms.
-              </li>
-              <li>
-                Devised a customized recursion algorithm to extend the functionality of the current environment to a multi-robot and multi-system
-environment
-              </li>
-              <li>
-                Collaborate with cross-functional teams to define, design, and ship new features.
-              </li>
-              <li>Continuously discover, evaluate, and implement new technologies to maximize development efficiency.</li>
-              <li>
-                <b>Tools:</b> Software Design Patterns · React Native · Android Development · Programming · Leadership · Team Management · Flutter
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Sept 2020 - Oct 2021 | Dhaka, Bangladesh</span>
-          </div>
-        </div>
-
-        <!-- Experience 2 -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://sebpo.com/" target="_blank"><img alt="mPower logo"
-                    src="/assets/img/sebpo_logo.jpeg" class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://sebpo.com/" target="_blank"
-                      class="teal-text hoverline">ServicEngine Bangladesh</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">
-              Software Engineer</div>
-            <ul>
-              <li>
-                Programmed a cloud-based web app using Groovy and JavaScript aimed at storing, visualizing, and tracking temperature and humidity
-of each drug container to estimate the degradation of the drug.
-              </li>
-              <li>
-                Created an alert system to send notifications and emails when the parameters exceed the threshold.
-              </li>
-              <li>
-                <b>Tools:</b> Groovy, Java, Spring boot, JavaScript
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Oct 2019 - Sept 2020 | Dhaka, Bangladesh</span>
-          </div>
-        </div>
-
-        <!-- Experience 3 -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://ictd.gov.bd/" target="_blank"><img alt="Cignex logo"
-                    src="/assets/img/ict.jpeg" class="responsive-img center-block" /></a>
-              </div>
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://ictd.gov.bd/" target="_blank"
-                      class="teal-text hoverline">ICT
-                      Division </a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Trainer on Android Games and Application</div>
-            <ul>
-              <li>
-                Create instructional materials, including presentations, tutorials, and hands-on exercises, to facilitate effective learning.
-              </li>
-              <li>
-                Provide technical guidance and mentorship to trainees, assisting them in solving problems and overcoming challenges encountered during the learning process.
-              </li>
-              <li>
-                <b>Tools:</b> Android, MySQL, Firebase
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>July 2018 - Oct 2019 | Dhaka, Bangladesh</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Fourth Section: Projects -->
-    <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
-      <div class="container">
-        <div class="row">
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="music streaming app" src="/assets/img/convay.jpeg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Convay Mobile & Web App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Video conferencing at its best
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b>· WebRTC · Spring boot · jitsi-meet sdk · SDK development · Objective-C · Webrtc · iOS Development · React Native · Java · SQL · Android app development</li>
-                  <li>Convay is a video conferencing platform designed with the needs of organizations in mind. Our app makes it easy to stay connected and work together with various features specifically tailored to enhance collaboration and productivity within teams.</li>
-                  <li>In addition to video conferencing, our application offers a range of tools to make meetings and collaboration more efficient. These include end-to-end meeting management, meeting content sharing, intelligent meeting scheduler and participant logs. With these tools, team members can effortlessly continue with their online meetings.</li>
-                  <li>Convay also offers a range of security features to protect your data and ensure that your meetings remain private. These include end-to-end encryption and the ability to set up password-protected meetings.</li>
-                  <li>Our application is the perfect solution for organizations looking to stay connected and work together, even when they can't be in the same place. With its robust set of features and a strong focus on security, Convay can be the ideal choice for any team looking to improve its collaboration efficiency and productivity.</li>
-
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://convay.com/home" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the mobile App" href="https://play.google.com/store/apps/details?id=org.synesisit.convay&hl=en_IN&gl=US"
-                    target="_blank" data-position="top" data-tooltip="View App"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-google-play"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="quiz app" src="/assets/img/ekpay.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">EkPay Mobile & Web App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  EkPay is a payment processor that offers comprehensive bill payment services for customers and merchants.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Software Design Patterns · Angular · Java · SQL · Android app development</li>
-                  <li>EkPay offers bill payment solutions to Assisted agents, syndicated agents, banks are integrated with us and service providers and allow consumers to make seamless bill payments from Cards, Bank Accounts and Digital Credit among others.</li>
-                  <li>The main idea of ‘Digital Bangladesh’ is the ability of the citizens to avail all government services with utmost ease through the use of information technology.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://ekpay.gov.bd/#/home" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit The Mobile App" href="https://play.google.com/store/apps/details?id=bd.com.synesisit.ekpay&hl=en_US"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-google-play"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 1. Django Project -->
-          <!-- <div class="col s12 m6 l6">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="django web app" src="/assets/img/project-library-logo.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Local Library Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A web-app that creates an online catalog for a small local library, where users can browse available books and manage their accounts.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> HTML, CSS, Bootstrap, SQLite, Django, Heroku</li>
-                  <li>Users can view list and detail information for books and authors.</li>
-                  <li>Admin users can create and manage models.</li>
-                  <li>Librarians can renew reserved books.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://django-local-lib.herokuapp.com" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/django-local-library"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Flask Project -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of web app" src="/assets/img/tender.jpeg"
-                style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Tender Bazar Mobile & Web App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A tender portal of Bangladesh.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Java, Angular, Ionic, Node.js, SQLAlchemy, Postgresql</li>
-                  <li>It has been the fastest growing tender portal of Bangladesh since its inception.</li>
-                  <li>It is currently the largest such platform that brings the bidders and inviters together to exchange business procurement information.</li>
-
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit Blog website" href="https://www.tenderbazar.com/#1" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit The iOS" href="https://apps.apple.com/us/app/tender-bazar/id1543161744"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-app-store"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- VQA -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/smart_bhumi.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Smart Bhumi Map<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  The digital maps and reports for maximum utilization of land based on land use.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>This app is to search Mouza and Plot information using Map as well as search option. User can view the plot and Land use of the plot. User can also get available Khatian information. User can also send the feedback to authority if they want to. This app is developed under Project “Mouza and plot based national digital land zoning project" - Ministry of Land, Bangladesh.</li>
-                  <li>The project will mainly help the central and local administrations in planning the future of land</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit Blog website" href="https://map.land.gov.bd/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit The android" href="https://play.google.com/store/apps/details?id=smart.bhumi.naksha&hl=nl&gl=US"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-google-play"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/bangla-tribune.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Bangla Tribune Mobile & Web App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  The Daily online news portal in Bangladesh.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Bangla Tribune (Bengali: বাংলা ট্রিবিউন) is a daily online news portal in Bangladesh, published from Dhaka in the Bengali language. Bangla Tribune, one of the fastest-growing online news portal in Bangladesh. The news portal is owned by Gemcon Group. The publisher of the news portal is Kazi Anis Ahmed, while Zulfiqer Russell serves as the Editor. The slogan of the newspaper is Everything in minimum words (কম কথায় সব কথা).</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit Blog website" href="https://www.banglatribune.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit The android" href="https://play.google.com/store/apps/details?id=com.banglatribune.banglatribune&hl=en_US"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-google-play"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- Video Summarizer -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/computer-vision-v2-04.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Video Summarizer<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A Seq2Seq model that generates a short summary of the given input video.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Incorporated CNN to detect and classify objects in the video frames and Long Short Term Memory for
-                    generating a summary.</li>
-                  <li>Evaluated the model on MSVD (Microsoft Video Description Corpus) dataset; achieved 0.77, 0.71,
-                    0.52 scores respectively on ROGUE,
-                    BLEU, METEOR evaluation metrics.</li>
-
-                </ul>
-                <!-- TODO: UPLOAD THIS PROJECT ON GITHUB -->
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Image Generator -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/gan.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Image Generator<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An image generator based on the concept of adversarial networks (GANs)
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Developed system was tested on a human-face database and loss was calculated by comparing the PCAs
-                    of generated and original image.</li>
-                  <li>Calculated difference in PCA was less than 10%, depicting the successful generation of an image by
-                    the generator.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Head Counting System -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/Blog-Images-Forget-Machine-Learning-Humans-Still-Have-a-Lot-to-Learn-Part-II.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Head Counting System<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A system that calculates the attendance of the class from a panoramic image of a live classroom.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Used Singular Value Decomposition for image compression; applied various image processing
-                    techniques and morphological operations to
-                    detect the number of heads.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ************* -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Fifth Section: Skills -->
-    <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal">Skills</h3>
-      <div class="container">
-        <!-- Languages and Databases -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Languages and Databases</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/java.png" class="responsive-img" />Java
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/kotlin.png" class="responsive-img" />Kotlin
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/objective-c.webp" class="responsive-img" />Objective-C
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/swift.png" class="responsive-img" />Swift
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/dart.png" class="responsive-img" />Dart
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/javascript.png" class="responsive-img" />JavaScript
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/python-logo-1-300x300.jpg" class="responsive-img" />Python
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/html5-300x300.jpg" class="responsive-img" />HTML5
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/css3-300x300.jpg" class="responsive-img" />CSS3
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/mysql-logo-1-300x300.jpg" class="responsive-img" />MySQL
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/postgresql-logo.png" class="responsive-img" />PostgreSQL
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/shell-logo-1-300x300.jpg" class="responsive-img" />Shell Scripting
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Libraries</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/webrtc.png" class="responsive-img" />WebRTC
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/android.png" class="responsive-img" />Android Jetpack
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/ios.jpeg" class="responsive-img" />UIKit
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/jitsi.png" class="responsive-img" />Jitsi-Meet
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/opensrp.png" class="responsive-img" />openSRP
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/opencv-logo-1-500x500.jpg" class="responsive-img" />OpenCV
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/sk-learn-logo-1-500x500.jpg" class="responsive-img" />scikit-learn
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/matplotlib-logo-1-500x500.jpg" class="responsive-img" />matplotlib
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Frameworks -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Frameworks</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/android.png" class="responsive-img" />Android
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/ios.jpeg" class="responsive-img" />iOS
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/flutter.png" class="responsive-img" />Flutter
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/react-native.png" class="responsive-img" />React Native
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/spring_boot.png" class="responsive-img" />Spring Boot
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/js.png" class="responsive-img" />Node.js
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Other -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Other</h4>
-            <div class="row text-center">
-
-
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/git.png" class="responsive-img" />Git
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/docker.png" class="responsive-img" />Docker
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/jira.png" class="responsive-img" />JIRA
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/clickup.png" class="responsive-img" />ClickUp
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/aws.png" class="responsive-img" />AWS
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/heroku.png" class="responsive-img" />Heroku
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- certifications -->
-        <!-- <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Certificates</h4>
-            <div class="row text-left">
-              <div class="container">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-machine-learning-coursera-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Machine Learning (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-algorithms-stanford-2-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Algorithms (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-      </div>
-    </section>
-
-    <!-- Seventh Section: Education -->
-    <section id="education" class="section scrollspy">
-      <h3 class="page-title white-text teal">Education</h3>
-      <div class="container">
-        <div class="row">
-          <!-- Education -->
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <p>
-                  <span class="card-title"><a href="https://www.juniv.edu/" target="_blank" class="teal-text hoverline">Jahangirnagar University</a></span>
-                </p>
-                <p class="brown-text">Dhaka, Bangladesh</p>
-                <p>
-                  <b>Degree: </b>Master of Science in Computer Science & Engineering      
-                  <br>
-                  <b>CGPA: </b>3.90/4.0
-                </p>
-
-                <ul>
-                  <p>
-                    <b>Relevant Courseworks:</b>
-                  <ul>
-                    <li>Distributed Database Systems</li>
-                    <li>Cloud Computing</li>
-                    <li>Foundations of Algorithms</li>                    
-                  </ul>
-                  </p>
-
-                </ul>
-              </div>
-            </div>
-
-            
-          </div>
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <p>
-                  <span class="card-title"><a href="https://www.juniv.edu/" target="_blank" class="teal-text hoverline">Jahangirnagar University</a></span>
-                </p>
-                <p class="brown-text">Dhaka, Bangladesh</p>
-                <p>
-                  <b>Degree: </b>Bachelor of Computer Science & Engineering
-                  <br>
-                  <b>CGPA: </b>3.70/4.00
-                </p>
-
-                <ul>
-                  <p>
-                    <b>Relevant Courseworks:</b>
-                  <ul>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Database Management Systems</li>
-                    <li>Operating Systems</li>
-                    <li>Machine Learning</li>
-                    <li>Computer Vision</li>
-                  </ul>
-                  </p>
-
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Eight Section: Contact -->
-    <section id="contact" class="section scrollspy full-height">
-      <h3 class="page-title white-text teal">Contact</h3>
-      <div class="container">
-        <p>
-          <a aria-label="Call Maksudur" data-position="top" data-tooltip="Call Maksudur"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
-              aria-label="Call Maksudur">+8801762040471</a></a>
-        </p>
-        <p>
-          <a aria-label="Email Maksudur" href="mailto:rotnocse@gmail.com" target="_blank" data-position="top"
-            data-tooltip="Email Maksudur" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-envelope"></i><a aria-label="Email Maksudur" href="mailto:rotnocse@gmail.com"
-              class="hoverline">rotnocse@gmail.com</a></a>
-        </p>
-        <p>
-          <a aria-label="View Maksudur on GitHub" href="http://github.com/maksudur-rahman" target="_blank"
-            data-position="top" data-tooltip="View Maksudur on GitHub"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i><a
-              aria-label="Maksudur on Github" href="http://github.com/maksudur-rahman" class="hoverline"
-              target="_blank">github.com/maksudur-rahman</a></a>
-        </p>
-        <p>
-          <a aria-label="View Maksudur on LinkedIn" href="https://www.linkedin.com/in/maksudurrahman44/" target="_blank"
-            data-position="top" data-tooltip="View Maksudur on LinkedIn"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-linkedin"></i><a aria-label="Maksudur on LinkedIn" href="https://www.linkedin.com/in/maksudurrahman44/"
-              class="hoverline" target="_blank">linkedin.com/in/maksudurrahman44/</a></a>
-        </p>
-        <p>
-          <a aria-label="View Maksudur on Facebook" href="https://www.facebook.com/rotno.moon/" target="_blank"
-            data-position="top" data-tooltip="View Maksudur on Facebook"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-facebook"></i><a aria-label="Maksudur on Facebook" href="https://www.facebook.com/rotno.moon/"
-              class="hoverline" target="_blank">facebook.com/rotno.moon/</a></a>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ["Fullstack Developer","mobile expert in Android and iOS", "Team Leader", "Fast Learner"],
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40
-    });
-  </script>
-
-
-  <!-- jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <!-- Materialize - Compiled and minified JavaScript-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-  <script>
-    // Materialize - Initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
-  </script>
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+	<header>
+		<div class="row">
+
+			<div class="top-bar">
+				<a class="menu-toggle" href="#"><span>Menu</span></a>
+
+				<div class="logo">
+					<a href="index.html">MAKSUDUR</a>
+				</div>
+
+				<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll" href="#about" title="">About</a></li>
+						<li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
+						<li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
+						<li><a class="smoothscroll" href="#services" title="">Services</a></li>
+						<li><a class="smoothscroll" href="#blog" title="">Blog</a></li>
+						<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
+					</ul>
+				</nav>
+			</div> <!-- /top-bar -->
+
+		</div> <!-- /row -->
+	</header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+	<section id="intro">
+
+		<div class="intro-overlay"></div>
+
+		<div class="intro-content">
+			<div class="row">
+
+				<div class="col-twelve">
+
+					<div class="intro-badge-wrapper">
+						<span class="badge badge-availability">
+							<span class="dot"></span> Open to Opportunities
+						</span>
+					</div>
+
+					<h5>Hi, I'm Maksudur Rahman!</h5>
+					<h1><span class="code-tag">Senior Mobile Engineer</span></h1>
+
+					<p class="intro-position">
+						Leading-edge mobile developer focused on scalable architecture, CI/CD, and solving complex real-world problems.
+					</p>
+
+					<div class="intro-actions">
+						<a class="button button-primary smoothscroll" href="#about" title="">About me</a>
+						<a class="button stroke smoothscroll" href="#contact" title="">Let's talk →</a>
+						<a class="button button-primary" href="https://cal.com/maksudur-rahman" target="_blank" title="">Book
+							Call ☏</a>
+					</div>
+
+					<ul class="intro-social">
+						<li><a href="https://www.linkedin.com/in/maksudurrahman44/" target="_blank"><i
+									class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://github.com/maksudur-rahman" target="_blank"><i class="fa fa-github"></i></a></li>
+						<li><a href="https://stackoverflow.com/users/7996293/maksudur-rahman" target="_blank"><i
+									class="fa fa-stack-overflow"></i></a></li>
+						<li><a href="https://www.facebook.com/rotno.moon/" target="_blank"><i class="fa fa-facebook"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div> <!-- /intro-content -->
+	</section> <!-- /intro -->
+
+
+	<!-- about section
+   ================================================== -->
+	<section id="about">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Global Expertise</h5>
+				<h1>Let me introduce <span class="code-tag">the Engineer</span></h1>
+
+				<div class="intro-info">
+					<img src="images/profile-pic.jpg"
+						alt="Maksudur Rahman - Senior Mobile Engineer & Lead Mobile App Developer">
+					<p class="lead">Senior Mobile App Developer (7+ years) building scalable, high-performance apps with
+						React Native, Flutter, Kotlin, Swift, and WebRTC, with proven impact on DAU growth and app
+						stability, and strong experience in SDKs, real-time systems, and team leadership.
+					</p>
+				</div>
+
+			</div>
+		</div> <!-- /section-intro -->
+
+		<!-- Stats Rows -->
+		<div class="about-stats-group">
+			<div class=" row about-stats">
+				<div class="col-four tab-full">
+					<div class="stat-card">
+						<div class="stat-number">7+</div>
+						<div class="stat-label">Years of experience</div>
+					</div>
+				</div>
+				<div class="col-four tab-full">
+					<div class="stat-card">
+						<div class="stat-number">30+</div>
+						<div class="stat-label">Completed projects</div>
+					</div>
+				</div>
+				<div class="col-four tab-full">
+					<div class="stat-card">
+						<div class="stat-number">99%</div>
+						<div class="stat-label">Crash-free users</div>
+					</div>
+				</div>
+			</div>
+			<div class=" row about-stats">
+				<div class="col-four tab-full">
+					<div class="stat-card">
+						<div class="stat-number">5+</div>
+						<div class="stat-label">Stacks &amp; frameworks</div>
+					</div>
+				</div>
+				<div class="col-four tab-full">
+					<div class="stat-card">
+						<div class="stat-number">1.2M+</div>
+						<div class="stat-label">Peak daily users scaled</div>
+					</div>
+				</div>
+				<div class="col-four tab-full">
+					<div class="stat-card">
+						<div class="stat-number">10+</div>
+						<div class="stat-label">SDKs &amp; integrations</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row about-content">
+
+			<div class="col-four tab-full">
+
+				<h3>Profile</h3>
+				<p class="profile-motto">Life's my codebase, and I'm here to write it perfectly.</p>
+				<ul class="info-list">
+					<li>
+						<strong>Fullname:</strong>
+						<span>Maksudur Rahman</span>
+					</li>
+					<li>
+						<strong>Origin:</strong>
+						<span>Dhaka, Bangladesh</span>
+					</li>
+					<li>
+						<strong>Current Position:</strong>
+						<span>Lead Software Engineer at Synesis IT</span>
+					</li>
+					<li>
+						<strong>Website:</strong>
+						<span><a href="https://maksudur-rahman.github.io/" target="_blank">https://maksudur-rahman.github.io/</a></span>
+					</li>
+					<li>
+						<strong>Email:</strong>
+						<span>rotnocse@gmail.com</span>
+					</li>
+
+				</ul> <!-- /info-list -->
+
+			</div>
+
+			<div class="col-eight tab-full">
+
+				<h3>Skills</h3>
+
+				<ul class="skill-bars skill-bars--two-col">
+					<li>
+						<div class="progress percent90"><span>90%</span></div>
+						<strong>Android</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>Java</strong>
+					</li>
+					<li>
+						<div class="progress percent90"><span>90%</span></div>
+						<strong>Kotlin</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>Flutter</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>90%</span></div>
+						<strong>React Native</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>Swift &amp; iOS</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>TypeScript</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>JavaScript</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>85%</span></div>
+						<strong>WebRTC &amp; real-time</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>SDK design &amp; integration</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>REST &amp; GraphQL APIs</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>Node.js</strong>
+					</li>
+					<li>
+						<div class="progress percent75"><span>75%</span></div>
+						<strong>Laravel</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>PHP</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>Firebase &amp; cloud backends</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>Push notifications (FCM, APNs)</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>Sygnal &amp; Matrix push gateways</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>Mobile app security &amp; hardening</strong>
+					</li>
+					<li>
+						<div class="progress percent75"><span>75%</span></div>
+						<strong>Rust &amp; native SDKs (FFI, JNI, UniFFI)</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>OAuth 2, OIDC &amp; token flows</strong>
+					</li>
+					<li>
+						<div class="progress percent75"><span>75%</span></div>
+						<strong>End-to-end encryption patterns</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>Unit &amp; UI testing</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>Scrum</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>Git</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>Agile</strong>
+					</li>
+					<li>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>CI/CD</strong>
+					</li>
+					<li>
+						<div class="progress percent90"><span>90%</span></div>
+						<strong>Clean Architecture</strong>
+					</li>
+				</ul> <!-- /skill-bars -->
+
+			</div>
+
+		</div>
+
+		<div class="row button-section">
+			<div class="col-twelve">
+				<a href="asset/Maksudur-Rahman.pdf"
+					target="_blank" title="Hire Me" class="button button-primary">Hire Me</a>
+				<a href="asset/Maksudur-Rahman.pdf"
+					target="_blank" title="Download CV" class="button button-primary">Download CV</a>
+			</div>
+		</div>
+
+	</section> <!-- /process-->
+
+
+	<!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Experience</h5>
+				<h1>Lead Mobile App Developer <span class="code-tag">Credentials</span></h1>
+
+			</div>
+		</div> <!-- /section-intro-->
+
+		<div class="row resume-timeline">
+
+			<div class="col-twelve resume-header">
+
+				<h2>Work Experience</h2>
+
+			</div> <!-- /resume-header -->
+
+			<div class="col-twelve">
+
+				<div class="timeline-wrap">
+
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-briefcase"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>Team Leader</h3>
+							<p>April 2021 - Present</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4><a href="https://www.synesisit.com/" target="_blank" rel="noopener">Synesis IT PLC</a>
+							</h4>
+							<p>Lead delivery of mobile applications and SDKs aligned with international standards,
+								spanning native stacks, React Native, and platform-level work.</p>
+							<h3>Key responsibilities:</h3>
+							<ul>
+								<li>Design and develop mobile applications and SDKs in compliance with international
+									standards and client security expectations.</li>
+								<li>Hands-on engineering with Java, Dart, React Native, Objective-C, and AOSP for
+									shipping, maintainable production code.</li>
+								<li>Lead technical design, code reviews, and delivery planning for multiple concurrent
+									product streams.</li>
+								<li>Own SDK and native bridge architecture (e.g. method channels, JNI/FFI boundaries)
+									for shared logic and platform-specific features.</li>
+								<li>Drive push, real-time, and WebRTC-related features end-to-end with backend and
+									DevOps stakeholders.</li>
+								<li>Define and improve CI/CD, automated testing, release checklists, and crash/analytics
+									feedback loops.</li>
+								<li>Mentor and grow engineers (5+); set coding standards, run knowledge shares, and
+									support hiring and onboarding.</li>
+								<li>Partner with product, QA, and clients on requirements, estimates, and production
+									incident response.</li>
+							</ul>
+						</div>
+
+					</div> <!-- /timeline-block -->
+
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-briefcase"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>Software Engineer</h3>
+							<p>January 2020 - March 2021</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4><a href="https://www.mpower-social.com/" target="_blank" rel="noopener">mPower Social
+									Enterprises Ltd.</a></h4>
+							<p>Built mobile applications and SDKs for production use, following established quality and
+								compliance expectations.</p>
+							<h3>Key responsibilities:</h3>
+							<ul>
+								<li>Design and develop mobile applications and SDKs in compliance with international
+									standards.</li>
+								<li>Implement features across Android and iOS using Java, Kotlin, Dart, and
+									Objective-C.</li>
+								<li>Collaborate with product and field teams on requirements for health and development
+									domain apps.</li>
+								<li>Improve app stability, performance, and offline-first sync patterns for low-connectivity
+									environments.</li>
+								<li>Participate in sprint planning, estimation, demos, and production support rotations.</li>
+								<li>Write and maintain unit/UI tests; support UAT and release packaging.</li>
+								<li>Document APIs, integration guides, and handover material for partners and internal
+									teams.</li>
+							</ul>
+						</div>
+
+					</div> <!-- /timeline-block -->
+
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-briefcase"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>Software Engineer</h3>
+							<p>July 2019 - December 2019</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4></h4>
+							<h4><a href="https://sebpo.com/" target="_blank" rel="noopener">Service Engine Ltd.</a></h4>
+							<p>Delivered mobile applications and SDKs as part of a product-focused engineering team.</p>
+							<h3>Key responsibilities:</h3>
+							<ul>
+								<li>Design and develop mobile applications and SDKs in compliance with international
+									standards.</li>
+								<li>Build and ship features with Java, Groovy, Dart, and Objective-C across Android and
+									iOS codebases.</li>
+								<li>Integrate REST services, authentication flows, and third-party SDKs into mobile
+									clients.</li>
+								<li>Refactor legacy modules for readability, testability, and consistent architecture.</li>
+								<li>Work closely with senior engineers on technical spikes, prototypes, and production
+									bug fixes.</li>
+								<li>Follow agile ceremonies, version control practices, and code review guidelines.</li>
+								<li>Support build configuration, signing, and store-ready release artifacts.</li>
+							</ul>
+						</div>
+
+					</div> <!-- /timeline-block -->
+
+				</div> <!-- /timeline-wrap -->
+
+			</div> <!-- /col-twelve -->
+
+		</div> <!-- /resume-timeline -->
+
+		<div class="row resume-timeline">
+
+			<div class="col-twelve resume-header">
+
+				<h2>Education</h2>
+
+			</div> <!-- /resume-header -->
+
+			<div class="col-twelve">
+
+				<div class="row education-cards-row">
+
+					<div class="col-six tab-full">
+						<article class="education-card">
+							<h4 class="education-card__school"><a href="https://www.juniv.edu/" target="_blank"
+									rel="noopener">Jahangirnagar University</a></h4>
+							<p class="education-card__location">Dhaka, Bangladesh</p>
+							<p class="education-card__field"><strong>Degree:</strong> Master of Science in Computer
+								Science &amp; Engineering</p>
+							<p class="education-card__cgpa"><strong>CGPA:</strong> 3.90/4.0</p>
+							<h5 class="education-card__courses-heading">Relevant Courseworks</h5>
+							<ul class="education-card__courses">
+								<li>Distributed Database Systems</li>
+								<li>Cloud Computing</li>
+								<li>Foundations of Algorithms</li>
+							</ul>
+						</article>
+					</div>
+
+					<div class="col-six tab-full">
+						<article class="education-card">
+							<h4 class="education-card__school"><a href="https://www.juniv.edu/" target="_blank"
+									rel="noopener">Jahangirnagar University</a></h4>
+							<p class="education-card__location">Dhaka, Bangladesh</p>
+							<p class="education-card__field"><strong>Degree:</strong> Bachelor of Computer Science
+								&amp; Engineering</p>
+							<p class="education-card__cgpa"><strong>CGPA:</strong> 3.70/4.00</p>
+							<h5 class="education-card__courses-heading">Relevant Courseworks</h5>
+							<ul class="education-card__courses">
+								<li>Data Structures and Algorithms</li>
+								<li>Database Management Systems</li>
+								<li>Operating Systems</li>
+								<li>Machine Learning</li>
+								<li>Computer Vision</li>
+							</ul>
+						</article>
+					</div>
+
+				</div> <!-- /education-cards-row -->
+
+			</div> <!-- /col-twelve -->
+
+		</div> <!-- /resume-timeline -->
+
+	</section> <!-- /features -->
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Portfolio</h5>
+				<h1>Check Out Some of My <span class="code-tag">Works</span></h1>
+
+				<p class="lead">Explore my portfolio of high-impact mobile work across <b>Android</b> (Kotlin, Java),
+					<b>iOS</b> (Swift, Objective-C), <b>Flutter</b>, and <b>React Native</b>—plus <b>SDKs</b>,
+					<b>WebRTC</b>, push and real-time systems, and secure integrations. When products need a backend,
+					I ship alongside <b>Node.js</b>, <b>Laravel</b>, and <b>PHP</b> APIs. These projects reflect how I
+					architect, build, and scale apps as a <b>Lead Mobile App Developer</b> and engineering lead.
+				</p>
+
+			</div>
+		</div> <!-- /section-intro-->
+
+		<div class="row portfolio-content">
+
+			<div class="col-twelve">
+
+				<!-- portfolio-wrapper -->
+				<div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+					<!-- Featured order: Convay → Paintology → YallaGai → EkPay → Convay Chat → Tender Bazar → LEX; then others -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/convay.png" alt="Convay video conferencing" loading="lazy">
+							<a href="#modal-08" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Convay Mobile &amp; Web</h3>
+										<span class="folio-types">
+											WebRTC · React Native · SDK · iOS &amp; Android
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/paintology.png" alt="Paintology Natural Drawing app" loading="lazy">
+							<a href="#modal-17" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Paintology: Natural Drawing</h3>
+										<span class="folio-types">
+											Android · Art &amp; design · Gamified learning
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/yallagai.png" alt="YallaGai ride-hailing app" loading="lazy">
+							<a href="#modal-16" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">YallaGai</h3>
+										<span class="folio-types">
+											Android · Ride-hailing · Real-time tracking
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/ekpay.png" alt="EkPay" loading="lazy">
+							<a href="#modal-09" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">EkPay Mobile &amp; Web</h3>
+										<span class="folio-types">
+											Angular · Java · Android
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/convay_chat.png" alt="Convay Chat secure team messaging" loading="lazy">
+							<a href="#modal-19" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Convay Chat</h3>
+										<span class="folio-types">
+											Android · E2E encryption · Enterprise messaging
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/tender_bazar.jpeg" alt="Tender Bazar" loading="lazy">
+							<a href="#modal-10" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Tender Bazar</h3>
+										<span class="folio-types">
+											Ionic · Node.js · PostgreSQL
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/lex_car_wash.png" alt="LEX Car Wash app" loading="lazy">
+							<a href="#modal-18" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">LEX Car Wash</h3>
+										<span class="folio-types">
+											Android · On-demand services · Business
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/smart_bhumi.png" alt="Smart Bhumi Map" loading="lazy">
+							<a href="#modal-11" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Smart Bhumi Map</h3>
+										<span class="folio-types">
+											Android · GIS · Government
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/bangla-tribune.png" alt="Bangla Tribune" loading="lazy">
+							<a href="#modal-12" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Bangla Tribune</h3>
+										<span class="folio-types">
+											Android · News &amp; media
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/video_summarizer.png" alt="Video Summarizer" loading="lazy">
+							<a href="#modal-13" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Video Summarizer</h3>
+										<span class="folio-types">
+											Deep learning · Seq2Seq · CV
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/gan.jpg" alt="Image Generator GAN" loading="lazy">
+							<a href="#modal-14" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Image Generator</h3>
+										<span class="folio-types">
+											GAN · Python
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/head_counting.jpg" alt="Head Counting System" loading="lazy">
+							<a href="#modal-15" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Head Counting System</h3>
+										<span class="folio-types">
+											OpenCV · Image processing
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<!-- modal popups - begin
+	            ============================================================= -->
+					<div id="modal-01" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/bp_banner.png" alt="" />
+						</div>
+
+						<div class="description-box">
+							<h4>Before Pay</h4>
+							<p>Before Pay - Pay On Demand™ - a pay advance service that lets working Australians take
+								back control of their finances and access a portion of their wages for just a 5% fixed
+								fee.</p>
+
+							<div class="categories">Android Native Development</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://www.beforepay.com.au/" target="_blank">Details</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-01 -->
+
+					<div id="modal-02" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/my_bl_details.png" alt="" />
+						</div>
+
+						<div class="description-box">
+							<h4>My Banglalink</h4>
+							<p>A popular telecommunication service app in Bangladesh. It is one of the leading super app
+								in Bangladesh, which provides telco services, lifestyle, exciting courses and games, as
+								well as health services.</p>
+
+							<div class="categories">Android Native Development</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=com.arena.banglalinkmela.app"
+								target="_blank">Details</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-02 -->
+
+					<div id="modal-03" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/full_banner.jpg" alt="" />
+						</div>
+
+						<div class="description-box">
+							<h4>The Pinoy Parent</h4>
+							<p>Pinoy Parent is a publication site that intends to help young Filipino parents become
+								more knowledgeable and more supportive when it comes to their children. Because
+								parenting affects how a child develops, it’s important to consider all types of
+								development (physical, intellectual, social, emotional, and moral), which is what this
+								page aims to address.</p>
+
+							<div class="categories">Cross Platform Development with Flutter</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=com.savethechildren.pinoy_parent"
+								target="_blank">Details</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-03 -->
+
+					<div id="modal-04" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/magica_maids_details.png" alt="" />
+						</div>
+
+						<div class="description-box">
+							<h4>Maigca Maid</h4>
+							<p>Magica Maids is a global technology-driven cleaning marketplace connecting users with
+								independent cleaning service providers through its website and app. The platform enables
+								residential, commercial, and industrial cleaning services by allowing users to engage
+								nearby third-party providers. In addition, Magica Maids offers in-house cleaners for
+								select specialized cleaning services.</p>
+
+							<div class="categories">Cross Platform Development with Flutter</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=com.home.service.magica_maids.magica_maids"
+								target="_blank">Details</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-04 -->
+
+					<div id="modal-05" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/ege_lms_details.png" alt="" />
+						</div>
+
+						<div class="description-box">
+							<h4>EGE LMS</h4>
+							<p>The Empowering Girls through Education (EGE) project supports Bangladeshs Primary
+								Education Development Plan by improving learning quality and easing girls transition
+								from primary to secondary school. Focusing on Grades IV and V, it enhances Bengali,
+								English, and Mathematics skills through child-friendly digital content while raising
+								awareness on girls education and preventing early marriage. The project engages girls,
+								parents, teachers, communities, and institutions, and strengthens teachers capacity to
+								use digital technologies in classrooms.</p>
+
+							<div class="categories">Android Native Development</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=ege.lms.savethechildren.bangladesh"
+								target="_blank">Details</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-05 -->
+
+					<div id="modal-06" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/rent_collector_banner.png" alt="" />
+						</div>
+
+						<div class="description-box">
+							<h4>Rent Collector</h4>
+							<p>Rent Collection - Rent Collector app collects one's rent, which tenant doesn't pay rent,
+								which month this tenant doesn't pay rent.</p>
+
+							<div class="categories">Android Native Development</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=com.shakil.barivara"
+								target="_blank">Details</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-06 -->
+
+					<div id="modal-07" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/git_lib.jpg" alt="Beetle">
+						</div>
+
+						<div class="description-box">
+							<h4>Git Lib</h4>
+							<p>Git Lib is created with a good intention to provide developers with GitHub libraries or
+								trending open source resources. This app has all the features you need to know about
+								trending GitHub repositories or developers or any other classified library. Below are
+								some of the top functionalities that you can get.</p>
+
+							<div class="categories">Android Native Development</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=app.com.gitlib"
+								target="_blank">Details</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-07 -->
+
+					<div id="modal-08" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/convay.png" alt="Convay" />
+						</div>
+
+						<div class="description-box">
+							<h4>Convay Mobile &amp; Web App</h4>
+							<p>Video conferencing at its best. Convay is a platform for organizations with meeting
+								management, content sharing, intelligent scheduling, participant logs, and strong security
+								including end-to-end encryption and password-protected meetings.</p>
+							<p><strong>Tools:</strong> WebRTC, Spring Boot, Jitsi-meet SDK, SDK development, Objective-C,
+								React Native, Java, SQL, Android &amp; iOS.</p>
+							<p>
+								<a href="https://play.google.com/store/apps/details?id=org.synesisit.convay&amp;hl=en_IN&amp;gl=US"
+									target="_blank" rel="noopener">Google Play</a>
+								<span aria-hidden="true"> · </span>
+								<a href="https://apps.apple.com/us/app/convay/id6444846555" target="_blank"
+									rel="noopener">App Store</a>
+							</p>
+
+							<div class="categories">WebRTC · React Native · Mobile SDK</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://convay.com/home" target="_blank" rel="noopener">Website</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-08 -->
+
+					<div id="modal-09" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/ekpay.png" alt="EkPay" />
+						</div>
+
+						<div class="description-box">
+							<h4>EkPay Mobile &amp; Web App</h4>
+							<p>EkPay is a payment processor for bill payment for customers and merchants—integrating
+								assisted agents, banks, and service providers so consumers can pay from cards, bank
+								accounts, and digital credit as part of Digital Bangladesh initiatives.</p>
+							<p><strong>Tools:</strong> Software design patterns, Angular, Java, SQL, Android.</p>
+							<p><a href="https://play.google.com/store/apps/details?id=bd.com.synesisit.ekpay&amp;hl=en_US"
+									target="_blank" rel="noopener">Google Play</a></p>
+
+							<div class="categories">Angular · Java · Android</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://ekpay.gov.bd/#/home" target="_blank" rel="noopener">Website</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-09 -->
+
+					<div id="modal-10" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/tender_bazar.jpeg" alt="Tender Bazar" />
+						</div>
+
+						<div class="description-box">
+							<h4>Tender Bazar Mobile &amp; Web App</h4>
+							<p>A tender portal of Bangladesh—one of the fastest-growing platforms connecting bidders and
+								inviters for business procurement information.</p>
+							<p><strong>Tools:</strong> Java, Angular, Ionic, Node.js, SQLAlchemy, PostgreSQL.</p>
+							<p><a href="https://apps.apple.com/us/app/tender-bazar/id1543161744" target="_blank"
+									rel="noopener">App Store</a></p>
+
+							<div class="categories">Ionic · Node.js · PostgreSQL</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://www.tenderbazar.com/#1" target="_blank" rel="noopener">Website</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-10 -->
+
+					<div id="modal-11" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/smart_bhumi.png" alt="Smart Bhumi Map" />
+						</div>
+
+						<div class="description-box">
+							<h4>Smart Bhumi Map</h4>
+							<p>Digital maps and reports for land use under the Ministry of Land, Bangladesh—search Mouza
+								and plot information, view land use and Khatian data, and send feedback to authorities.
+								Supports national digital land zoning planning.</p>
+							<p><a href="https://play.google.com/store/apps/details?id=smart.bhumi.naksha&amp;hl=nl&amp;gl=US"
+									target="_blank" rel="noopener">Google Play</a></p>
+
+							<div class="categories">Android · GIS · Government</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://map.land.gov.bd/" target="_blank" rel="noopener">Website</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-11 -->
+
+					<div id="modal-12" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/bangla-tribune.png" alt="Bangla Tribune" />
+						</div>
+
+						<div class="description-box">
+							<h4>Bangla Tribune Mobile &amp; Web App</h4>
+							<p>Bangla Tribune (বাংলা ট্রিবিউন) is a leading Bengali-language online news portal from
+								Dhaka—owned by Gemcon Group, with the slogan “কম কথায় সব কথা” (everything in minimum
+								words).</p>
+							<p><a href="https://play.google.com/store/apps/details?id=com.banglatribune.banglatribune&amp;hl=en_US"
+									target="_blank" rel="noopener">Google Play</a></p>
+
+							<div class="categories">Android · News &amp; media</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://www.banglatribune.com/" target="_blank" rel="noopener">Website</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-12 -->
+
+					<div id="modal-13" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/video_summarizer.png" alt="Video Summarizer" />
+						</div>
+
+						<div class="description-box">
+							<h4>Video Summarizer</h4>
+							<p>A Seq2Seq model that generates a short summary of an input video. CNNs detect and classify
+								objects in frames; LSTM generates the summary. Evaluated on the MSVD (Microsoft Video
+								Description Corpus) dataset with strong ROGUE, BLEU, and METEOR scores.</p>
+
+							<div class="categories">Deep learning · Seq2Seq · Computer vision</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://github.com/varadbhogayata/" target="_blank" rel="noopener">GitHub</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-13 -->
+
+					<div id="modal-14" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/gan.jpg" alt="Image Generator" />
+						</div>
+
+						<div class="description-box">
+							<h4>Image Generator</h4>
+							<p>An image generator based on generative adversarial networks (GANs), tested on a human-face
+								database; loss compared PCAs of generated vs. original images with under 10% PCA
+								difference.</p>
+
+							<div class="categories">GAN · Python · Deep learning</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://github.com/varadbhogayata/" target="_blank" rel="noopener">GitHub</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-14 -->
+
+					<div id="modal-15" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/head_counting.jpg" alt="Head Counting System" />
+						</div>
+
+						<div class="description-box">
+							<h4>Head Counting System</h4>
+							<p>A system that estimates class attendance from a panoramic image of a live classroom using
+								SVD for image compression, image processing techniques, and morphological operations to
+								detect head counts.</p>
+
+							<div class="categories">OpenCV · Image processing · ML</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
+								rel="noopener">GitHub</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-15 -->
+
+					<div id="modal-16" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/yallagai.png" alt="YallaGai" />
+						</div>
+
+						<div class="description-box">
+							<h4>YallaGai</h4>
+							<p>YallaGai is a global ride-hailing app offering quick, safe, and comfortable trips anytime
+								with professional drivers and 24/7 availability. Book rides to airports or any
+								destination, track your driver and fare in real time, and choose flexible payment options
+								including wallet and cash.</p>
+							<p><strong>Highlights:</strong> live trip tracking, instant booking confirmation, ratings,
+								saved places, offers, points and coupons, in-app alerts, and 24/7 support—built for a
+								seamless taxi experience worldwide.</p>
+							<p><a href="https://apps.apple.com/jo/app/yallagai/id6714483119" target="_blank"
+									rel="noopener">App Store</a></p>
+
+							<div class="categories">Android · Ride-hailing · Travel &amp; local</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=com.yallagai.user" target="_blank"
+								rel="noopener">Google Play</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-16 -->
+
+					<div id="modal-17" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/paintology.png" alt="Paintology" />
+						</div>
+
+						<div class="description-box">
+							<h4>Paintology: Natural Drawing</h4>
+							<p>Learning how to draw is a rewarding journey that can be approached in many ways,
+								depending on your goals and preferred learning style. Paintology has borrowed many of the
+								techniques familiar with traditional materials to bring you this Total Beginner app.</p>
+							<p>The app focuses on <strong>art fundamentals</strong>—not just digital tools—with a
+								gamified path from beginner to expert, step-by-step tutorials, exercises, peer feedback,
+								and lessons on composition, shading, perspective, and more.</p>
+
+							<div class="categories">Android · Art &amp; design · Education</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=com.paintology.lite" target="_blank"
+								rel="noopener">Google Play</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-17 -->
+
+					<div id="modal-18" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/lex_car_wash.png" alt="LEX Car Wash" />
+						</div>
+
+						<div class="description-box">
+							<h4>LEX Car Wash App</h4>
+							<p>LEX is the application that allows you to order the washing of your vehicle, among other
+								services, at the time and place you require it. Through our friendly application and the
+								use of our environmentally friendly products, your vehicle will remain impeccable and
+								most importantly without spending your precious time in rows and waiting for the washing
+								of your vehicle.</p>
+							<p>Use your time in what is really important—for your vehicle, use LEX.</p>
+
+							<div class="categories">Android · On-demand · Business</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://play.google.com/store/apps/details?id=com.doomshell.lexcarwash"
+								target="_blank" rel="noopener">Google Play</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-18 -->
+
+					<div id="modal-19" class="popup-modal slider mfp-hide">
+
+						<div class="media">
+							<img src="images/portfolio/convay_chat.png" alt="Convay Chat" />
+						</div>
+
+						<div class="description-box">
+							<h4>Convay Chat</h4>
+							<p>Convay Chat is a secure and efficient messaging app designed for teams, public
+								institutions, and enterprises that require reliable communication. Built with productivity
+								and data privacy in mind, it supports cross-department collaboration and enables smooth
+								coordination across distributed teams.</p>
+							<p><strong>Highlights:</strong> 1:1 and group chat, secure file sharing, customizable
+								notifications, end-to-end encryption, multilingual UI, history and cloud sync,
+								role-based access, presence and scheduled messages, cross-device sync, and flexible
+								cloud or on-premise hosting—part of the broader Convay collaboration suite.</p>
+							<p>
+								<a href="https://play.google.com/store/apps/details?id=org.synesisit.convaychat"
+									target="_blank" rel="noopener">Google Play</a>
+								<span aria-hidden="true"> · </span>
+								<a href="https://apps.apple.com/us/app/convay-chat/id6736435933" target="_blank"
+									rel="noopener">App Store</a>
+							</p>
+
+							<div class="categories">Android · Secure messaging · Enterprise</div>
+						</div>
+
+						<div class="link-box">
+							<a href="https://convay.com/home" target="_blank" rel="noopener">Website</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-19 -->
+
+
+					<!-- modal popups - end
+	            ============================================================= -->
+
+				</div> <!-- /portfolio-wrapper -->
+
+			</div> <!-- /twelve -->
+
+		</div> <!-- /portfolio-content -->
+
+	</section> <!-- /portfolio -->
+
+	<!-- Services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Global Solutions</h5>
+				<h1>Idea to <span class="code-tag">Product</span></h1>
+
+				<p class="lead">I help founders and businesses across the <b>USA, Europe, and Asia-Pacific (Singapore,
+						Malaysia, and Japan)</b> transform their vision into market-ready digital products with minimum
+					effort. From zero to MVP, I handle the technical complexity so you can focus on growth.</p>
+
+			</div>
+		</div> <!-- /section-intro -->
+
+		<div class="row services-content">
+
+			<div class="mvp-services-grid">
+
+				<div class="mvp-service-card">
+
+					<div class="mvp-service-icon">
+						<i class="fa fa-rocket"></i>
+					</div>
+
+					<div class="service-content">
+						<h3>Rapid MVP Prototyping</h3>
+						<p>Launch fast without compromising quality. I build lean, high-performance MVPs for Mobile and
+							Web that are ready for real users and investor pitches.</p>
+					</div>
+
+				</div> <!-- /mvp-service-card -->
+
+				<div class="mvp-service-card">
+
+					<div class="mvp-service-icon">
+						<i class="fa fa-gears"></i>
+					</div>
+
+					<div class="service-content">
+						<h3>Scalable Architecture</h3>
+						<p>Leveraging experience from platforms with 1.2M+ users, I design systems that grow with you.
+							Clean architecture, robust APIs, and cost-effective cloud scaling.</p>
+					</div>
+
+				</div> <!-- /mvp-service-card -->
+
+					<div class="mvp-service-card">
+
+					<div class="mvp-service-icon">
+						<i class="fa fa-mobile-phone"></i>
+					</div>
+
+					<div class="service-content">
+						<h3>Future-Proof Tech</h3>
+						<p>Native Android, Flutter, React Native, and modern web stacks. I pick the stack that fits your
+							product, team, and roadmap—not hype—so you can ship and maintain with confidence.</p>
+					</div>
+
+				</div> <!-- /mvp-service-card -->
+
+				<div class="mvp-service-card">
+
+					<div class="mvp-service-icon">
+						<i class="fa fa-puzzle-piece"></i>
+					</div>
+
+					<div class="service-content">
+						<h3>SDKs &amp; native bridges</h3>
+						<p>Design and ship mobile SDKs, FFI/JNI boundaries, and native modules (Kotlin, Swift,
+							Objective-C) with clear APIs, versioning, and docs so partners and apps integrate without
+							friction.</p>
+					</div>
+
+				</div> <!-- /mvp-service-card -->
+
+				<div class="mvp-service-card">
+
+					<div class="mvp-service-icon">
+						<i class="fa fa-video-camera"></i>
+					</div>
+
+					<div class="service-content">
+						<h3>Real-time, WebRTC &amp; push</h3>
+						<p>End-to-end delivery for calling, chat, live updates, and push—signaling, media paths,
+							notifications (FCM/APNs), and reliability tuning for production traffic.</p>
+					</div>
+
+				</div> <!-- /mvp-service-card -->
+
+				<div class="mvp-service-card">
+
+					<div class="mvp-service-icon">
+						<i class="fa fa-plug"></i>
+					</div>
+
+					<div class="service-content">
+						<h3>APIs &amp; backend integration</h3>
+						<p>REST, GraphQL, auth (OAuth/OIDC), and server-side work with Node.js, Laravel, and PHP—wired
+							into mobile clients with performance, error handling, and observability in mind.</p>
+					</div>
+
+				</div> <!-- /mvp-service-card -->
+
+				<div class="mvp-service-card">
+
+					<div class="mvp-service-icon">
+						<i class="fa fa-shield"></i>
+					</div>
+
+					<div class="service-content">
+						<h3>Security &amp; hardening</h3>
+						<p>Threat modeling for mobile, secure storage, transport and certificate practices, SDK safety,
+							and encryption-aware features so releases meet enterprise and regulatory expectations.</p>
+					</div>
+
+				</div> <!-- /mvp-service-card -->
+
+				<div class="mvp-service-card">
+
+					<div class="mvp-service-icon">
+						<i class="fa fa-users"></i>
+					</div>
+
+					<div class="service-content">
+						<h3>Team leadership &amp; delivery</h3>
+						<p>Technical direction, code review, CI/CD, release trains, and mentoring—aligning engineering
+							with product and stakeholders so milestones ship on time without sacrificing quality.</p>
+					</div>
+
+				</div> <!-- /mvp-service-card -->
+
+			</div> <!-- /mvp-services-grid -->
+
+		</div> <!-- /services-content -->
+
+	</section> <!-- /services -->
+
+	<!-- Blog Section
+================================================== -->
+	<section id="blog" class="grey-section">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Blog</h5>
+				<h1>Latest <span class="code-tag">Thoughts</span></h1>
+				<p class="lead">Technical journals and deep dives into <b>Senior Android Engineering</b>,
+					Flutter internals, and the evolving ecosystem of mobile software architecture.
+				</p>
+
+			</div>
+		</div> <!-- /section-intro-->
+
+		<div class="row blog-content">
+			<div class="col-twelve">
+				<div id="blog-wrapper" class="stack">
+
+					<div class="blog-list-item">
+						<a href="https://medium.com/@maksudurrahmanrotno/why-does-my-build-take-forever-every-ios-macos-and-cross-platform-dev-every-single-week-9965d8649d49"
+							target="_blank" rel="noopener" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">iOS / macOS / CROSS-PLATFORM</span>
+								<span class="blog-date">APR 2026</span>
+							</div>
+							<h3 class="blog-title">“Why does my build take forever?” — every iOS, macOS, and
+								cross-platform dev, every single week.</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="blog/react-native-android-16kb-page-size.html" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">REACT NATIVE / ANDROID 15</span>
+								<span class="blog-date">NOV 2025</span>
+							</div>
+							<h3 class="blog-title">React Native &amp; the Android 16 KB Page Size Change: Everything You
+								Need to Know</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="https://shakilbd.medium.com/the-flutter-16-kb-changes-85fc8992667e" target="_blank"
+							class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">FLUTTER / ANDROID 15</span>
+								<span class="blog-date">AUG 2025</span>
+							</div>
+							<h3 class="blog-title">The “Flutter 16 KB changes”</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="https://shakilbd.medium.com/jetpack-compose-from-risky-bet-in-2022-to-engineering-standard-in-2025-06391cb92d80"
+							target="_blank" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">JETPACK COMPOSE / ANDROID EVOLUTION</span>
+								<span class="blog-date">SEP 2025</span>
+							</div>
+							<h3 class="blog-title">Jetpack Compose: From Risky Bet to Engineering Standard in 2025
+							</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="https://shakilbd.medium.com/i-made-my-jetpack-compose-home-screen-3-faster-heres-exactly-what-i-did-175e86f12bb5"
+							target="_blank" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">JETPACK COMPOSE / ANDROID EVOLUTION</span>
+								<span class="blog-date">NOV 2025</span>
+							</div>
+							<h3 class="blog-title">I Made My Jetpack Compose Home Screen 3 Times Faster — Here’s Exactly
+								What I Did
+							</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="https://shakilbd.medium.com/flows-vs-coroutines-in-kotlin-the-complete-practical-guide-053b10d2f368"
+							target="_blank" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">KOTLIN / FLOW / ANDROID EVOLUTION</span>
+								<span class="blog-date">OCT 2025</span>
+							</div>
+							<h3 class="blog-title">Flows vs Coroutines in Kotlin : The Complete Practical Guide</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="https://shakilbd.medium.com/ssl-pinning-in-android-securing-network-calls-the-right-way-a4b67074481c"
+							target="_blank" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">ANDROID SECURITY / NETWORKING</span>
+								<span class="blog-date">APR 2025</span>
+							</div>
+							<h3 class="blog-title">🔒 SSL Pinning in Android</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="https://shakilbd.medium.com/kotlin-multiplatform-vs-flutter-08f8f6178011"
+							target="_blank" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">KMP / FLUTTER / CROSS-PLATFORM</span>
+								<span class="blog-date">MAR 2024</span>
+							</div>
+							<h3 class="blog-title">Kotlin MultiPlatform vs Flutter</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="https://shakilbd.medium.com/material-design-the-revolution-of-android-eco-system-d3cbdb587b97"
+							target="_blank" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">UI DESIGN / ANDROID EVOLUTION</span>
+								<span class="blog-date">SEP 2025</span>
+							</div>
+							<h3 class="blog-title">Material Design: The revolution of Android Eco-System</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+					<div class="blog-list-item">
+						<a href="https://shakilbd.medium.com/jetpack-compose-deep-dive-lazy-components-and-why-they-redefined-mobile-lists-c9c159c9b4e3"
+							target="_blank" class="blog-link">
+							<div class="blog-item-header">
+								<span class="blog-category">ANDROID / JETPACK COMPOSE</span>
+								<span class="blog-date">SEP 2025</span>
+							</div>
+							<h3 class="blog-title">Jetpack Compose Deep Dive: Lazy Components</h3>
+							<div class="blog-arrow"><i class="fa fa-arrow-right"></i></div>
+						</a>
+					</div>
+
+				</div> <!-- /blog-wrapper -->
+			</div> <!-- /twelve -->
+		</div> <!-- /blog-content -->
+
+	</section> <!-- /blog -->
+
+
+	<!-- contact   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Contact</h5>
+				<h1>Get In <span class="code-tag">Touch</span></h1>
+
+				<p class="lead">In case of any queries you can send your queries with the below mentioned details!</p>
+
+			</div>
+		</div> <!-- /section-intro -->
+
+		<div class="row contact-info">
+
+			<div class="col-six tab-full collapse">
+
+				<div class="icon">
+					<i class="icon-mail"></i>
+				</div>
+
+				<h5>Email Me At</h5>
+
+				<p>rotnocse@gmail.com<br></p>
+
+			</div>
+
+			<div class="col-six tab-full">
+
+				<div class="icon">
+					<i class="icon-phone"></i>
+				</div>
+
+				<h5>Contact with me at Mobile/What's App At</h5>
+
+				<p>Phone/Mobile: (+880) 1762040471<br></p>
+
+			</div>
+
+		</div> <!-- /contact-info -->
+
+	</section> <!-- /contact -->
+
+
+	<!-- footer ================================================== -->
+
+	<footer>
+		<div class="row">
+
+			<div class="col-twelve tab-full">
+				<div class="copyright">
+					<span>© Copyright 2026 </span>
+					<span>Designed by <a href="https://www.linkedin.com/in/maksudurrahman44/"
+							target="_blank">Maksudur Rahman</a></span>
+				</div>
+			</div>
+
+			<div id="go-top">
+				<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+			</div>
+
+		</div> <!-- /row -->
+	</footer>
+
+	<div id="preloader">
+		<div id="loader"></div>
+	</div>
+
+	<!-- Java Script
+   ================================================== -->
+	<script defer src="js/jquery-2.1.3.min.js"></script>
+	<script defer src="js/plugins.js"></script>
+	<script defer src="js/main.js"></script>
+
 </body>
 
 </html>

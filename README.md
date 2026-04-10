@@ -1,5 +1,6 @@
 # Personal Portfolio ⚡️ 
-> A clean, beautiful, responsive portfolio template for Software Developers!
+> This is a customized template that I have used for showcasing my professional life. It's a single page portfolio website. I have customised the template or project based on my need, you can fork or clone this repo and make necesary changes for your own.
+A clean, beautiful, responsive portfolio template for Software Developers!
 
 > https://maksudur-rahman.github.io
 

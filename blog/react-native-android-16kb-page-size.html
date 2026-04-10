@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>React Native 16 KB Page Size — Maksudur Rahman</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Source+Code+Pro:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rn-16kb-article.css">
+<link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+
+<div class="medium-bar">
+  <div class="medium-logo">Medium</div>
+  <div class="medium-actions">
+    <a href="../index.html#blog" class="btn-outline">Portfolio</a>
+    <button type="button" class="btn-outline">Sign in</button>
+    <button type="button" class="btn-pub">Get started</button>
+  </div>
+</div>
+
+<div class="hero-image-wrap">
+  <img class="hero-svg-container" src="hero-rn16kb.svg" width="1200" height="420" alt="4 KB vs 16 KB page size, React Native, Android 15">
+</div>
+
+<div class="article">
+
+  <div class="kicker">Android · React Native · Performance</div>
+  <h1>React Native &amp; the Android 16 KB Page Size Change: Everything You Need to Know</h1>
+  <p class="subtitle">Google's new 16 KB memory page requirement is already live in Android 15. Here's what it means for your React Native app, your native modules, and what you must do before the deadline.</p>
+
+  <div class="author-row">
+    <div class="avatar">MR</div>
+    <div class="author-info">
+      <div class="author-name">Maksudur Rahman</div>
+      <div class="author-meta">Senior Mobile Engineer · React Native &amp; Android</div>
+    </div>
+    <div class="read-clap">
+      <span>12 min read</span>
+      <span>·</span>
+      <span>Nov 2025</span>
+    </div>
+  </div>
+
+  <div class="prose">
+
+    <p>If you maintain a React Native app that ships to Android, there is one change you cannot afford to ignore in 2025. Google has changed the memory page size requirement for Android 15 from <strong>4 KB to 16 KB</strong> — and starting <strong>November 1, 2025</strong>, all new apps and updates submitted to Google Play <em>must</em> be compatible.</p>
+
+    <p>This isn't a React Native-specific change. It's a kernel-level, hardware architecture decision by Google — but React Native developers feel it differently than pure web or Java/Kotlin developers, because React Native apps bundle native shared libraries (<code>.so</code> files) compiled and linked outside the standard Android build toolchain.</p>
+
+    <div class="pull-quote">"The 16 KB change isn't about your JavaScript. It's about every native library your app loads — including ones you've never touched."</div>
+
+    <h2>What is a memory page, and why does its size matter?</h2>
+
+    <p>When an operating system loads an executable or a shared library (<code>.so</code> file) into RAM, it doesn't load the entire file at once. It maps the file in fixed-size chunks called <strong>memory pages</strong>. On virtually all Android devices up to this point, that page size was <strong>4 KB (4,096 bytes)</strong>.</p>
+
+    <p>Apple moved to 16 KB pages on Apple Silicon in 2020. Google is now following suit for Android 15 on ARM64 hardware. The reason: modern ARM64 processors can address memory in 16 KB chunks natively, which means fewer TLB (Translation Lookaside Buffer) entries are needed to map the same amount of RAM. The result is faster memory access, fewer cache misses, and better overall system performance.</p>
+
+    <div class="diagram-wrap">
+      <img src="figure1-rn16kb.svg" width="700" height="260" alt="Diagram comparing 4 KB and 16 KB memory page mapping">
+      <div class="diagram-caption">Figure 1 — 4 KB vs 16 KB page mapping for a 64 KB shared library. Fewer pages = fewer TLB entries = faster memory access.</div>
+    </div>
+
+    <h2>What exactly breaks — and why?</h2>
+
+    <p>A shared library (<code>.so</code> file) must be <strong>aligned</strong> to the page size it was compiled for. If a library was built with 4 KB alignment and the OS tries to load it with 16 KB pages, the segment boundaries don't line up. The dynamic linker refuses to load the library, and your app crashes at startup with an error like:</p>
+
+    <div class="code-wrap">
+      <div class="code-bar">
+        <div class="code-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div>
+        <span class="code-lang">Logcat — crash on 16 KB device</span>
+      </div>
+      <pre>CANNOT LINK EXECUTABLE <span class="w">"libreactnativejni.so"</span>: <span class="w">"libhermes.so"</span>
+  has load commands not page-size aligned.
+<span class="w">dlopen failed</span>: "<span class="s">libmymodule.so</span>" is <span class="w">not page-aligned</span>
+  (expected alignment: <span class="n">16384</span>, actual: <span class="n">4096</span>)
+<span class="c">Caused by: java.lang.UnsatisfiedLinkError: dlopen failed</span></pre>
+    </div>
+
+    <p>This crash only happens on <strong>Android 15 devices with 16 KB page size</strong> (currently Pixel 9 series and newer ARM64 devices running Android 15). On older devices, 4 KB-aligned libraries still work fine.</p>
+
+    <div class="callout callout-warn">
+      <strong>Important:</strong> Starting November 1, 2025, all new app submissions and updates to Google Play must pass the 16 KB page size compatibility check — even if your target users won't have a 16 KB device for months. The check runs at submission time.
+    </div>
+
+    <h2>Which React Native versions are affected?</h2>
+
+    <p>The React Native core team addressed this. Here is exactly where you stand based on your version:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>RN Version</th><th>16 KB status</th><th>Hermes</th><th>Action needed</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.76+</td>
+            <td><span class="badge badge-green">Compatible</span></td>
+            <td><span class="badge badge-green">Compatible</span></td>
+            <td>Verify third-party native modules</td>
+          </tr>
+          <tr>
+            <td>0.74 – 0.75</td>
+            <td><span class="badge badge-yellow">Partial</span></td>
+            <td><span class="badge badge-yellow">Manual update</span></td>
+            <td>Update Hermes + check all .so files</td>
+          </tr>
+          <tr>
+            <td>0.72 – 0.73</td>
+            <td><span class="badge badge-red">Not compatible</span></td>
+            <td><span class="badge badge-red">Not compatible</span></td>
+            <td>Upgrade RN or manually patch NDK flags</td>
+          </tr>
+          <tr>
+            <td>Below 0.72</td>
+            <td><span class="badge badge-red">Not compatible</span></td>
+            <td><span class="badge badge-red">Not compatible</span></td>
+            <td>Upgrade required — no patch available</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>How to check your app right now</h2>
+
+    <p>Before doing anything else, scan your current APK or AAB to find which <code>.so</code> files are not 16 KB aligned. Google provides a dedicated tool for this:</p>
+
+    <div class="code-wrap">
+      <div class="code-bar">
+        <div class="code-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div>
+        <span class="code-lang">Terminal — check alignment with Android 16 KB tool</span>
+      </div>
+      <pre><span class="c"># Download the check_elf_alignment tool from Android NDK</span>
+<span class="c"># Or use the Play Console's Pre-launch report</span>
+
+<span class="c"># Manual check with readelf (from NDK toolchain)</span>
+$ <span class="fn">readelf</span> -l libyourmodule.so | <span class="fn">grep</span> -A1 <span class="s">"LOAD"</span>
+
+<span class="c"># Output: SAFE (16KB aligned)</span>
+  <span class="v">LOAD</span>  <span class="n">0x000000</span> ... <span class="v">Align</span>: <span class="n">0x4000</span>   <span class="c"># 0x4000 = 16384 = 16 KB ✓</span>
+
+<span class="c"># Output: UNSAFE (only 4KB aligned)</span>
+  <span class="v">LOAD</span>  <span class="n">0x000000</span> ... <span class="v">Align</span>: <span class="n">0x1000</span>   <span class="c"># 0x1000 = 4096 = 4 KB ✗</span></pre>
+    </div>
+
+    <p>You can also use the Android Gradle plugin's built-in lint check, which flags non-compliant libraries at build time in AGP 8.3+:</p>
+
+    <div class="code-wrap">
+      <div class="code-bar">
+        <div class="code-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div>
+        <span class="code-lang">android/app/build.gradle</span>
+      </div>
+      <pre>android {
+  lint {
+    <span class="v">enable</span> <span class="s">"NonCompatibleWith16KbPageSizes"</span>
+    <span class="v">error</span>  <span class="s">"NonCompatibleWith16KbPageSizes"</span>  <span class="c">// fail build if found</span>
+  }
+}</pre>
+    </div>
+
+    <h2>The fix — for your own native modules</h2>
+
+    <p>If you write custom native modules in C/C++ using the NDK, the fix requires updating your CMake or ndk-build configuration to set the correct alignment flags:</p>
+
+    <div class="code-wrap">
+      <div class="code-bar">
+        <div class="code-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div>
+        <span class="code-lang">CMakeLists.txt</span>
+      </div>
+      <pre><span class="c"># Add these linker flags to your CMakeLists.txt</span>
+<span class="fn">target_link_options</span>(mymodule PRIVATE
+  <span class="s">"-Wl,-z,max-page-size=16384"</span>   <span class="c"># set max page size to 16 KB</span>
+  <span class="s">"-Wl,-z,common-page-size=16384"</span> <span class="c"># set common page size to 16 KB</span>
+)
+
+<span class="c"># Alternatively, for ALL targets in your project:</span>
+<span class="fn">add_link_options</span>(
+  <span class="s">"-Wl,-z,max-page-size=16384"</span>
+  <span class="s">"-Wl,-z,common-page-size=16384"</span>
+)</pre>
+    </div>
+
+    <p>If you use <code>ndk-build</code> instead of CMake:</p>
+
+    <div class="code-wrap">
+      <div class="code-bar">
+        <div class="code-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div>
+        <span class="code-lang">Android.mk</span>
+      </div>
+      <pre><span class="c"># In your Android.mk</span>
+<span class="v">LOCAL_LDFLAGS</span> += <span class="s">-Wl,-z,max-page-size=16384</span>
+<span class="v">LOCAL_LDFLAGS</span> += <span class="s">-Wl,-z,common-page-size=16384</span></pre>
+    </div>
+
+    <div class="callout callout-info">
+      <strong>NDK version matters.</strong> You need NDK r26b or later to reliably produce 16 KB-aligned shared libraries. Check your NDK version in <code>android/local.properties</code> or in Android Studio under SDK Manager → NDK.
+    </div>
+
+    <h2>What about third-party native modules?</h2>
+
+    <p>This is where most React Native developers get stuck. Your own code is easy to fix. But your app likely pulls in 10–30 npm packages that include native code — React Native Camera, react-native-maps, react-native-vision-camera, SQLite plugins, crypto libraries, and so on. Each of them ships precompiled <code>.so</code> files.</p>
+
+    <p>Here's how to approach each dependency: if a library is already 16 KB compatible, no action is needed. If the maintainer has released a fix, update the package. Otherwise, fork and patch or replace the library.</p>
+
+    <div class="diagram-wrap">
+      <div class="figure-note">
+        <strong>Figure 2 — Decision flow.</strong> For each native dependency: check 16 KB compatibility → if not, check for maintainer fix → update, or fork/patch/replace.
+      </div>
+    </div>
+
+    <h3>Widely-used packages and their status</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Package</th><th>Status</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>react-native core (0.76+)</td><td><span class="badge badge-green">Compatible</span></td><td>Fixed in 0.76, Hermes updated</td></tr>
+          <tr><td>react-native-vision-camera</td><td><span class="badge badge-green">Compatible</span></td><td>V4+ uses updated NDK flags</td></tr>
+          <tr><td>react-native-maps</td><td><span class="badge badge-yellow">Check version</span></td><td>Depends on Google Maps SDK version</td></tr>
+          <tr><td>react-native-reanimated</td><td><span class="badge badge-green">Compatible</span></td><td>Updated in v3.6+</td></tr>
+          <tr><td>react-native-sqlite-storage</td><td><span class="badge badge-yellow">Needs update</span></td><td>Use op-sqlite as alternative</td></tr>
+          <tr><td>react-native-camera (legacy)</td><td><span class="badge badge-red">Unmaintained</span></td><td>Migrate to vision-camera</td></tr>
+          <tr><td>Custom NDK modules</td><td><span class="badge badge-yellow">Manual fix</span></td><td>Add -Wl,-z,max-page-size=16384</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Testing on a 16 KB emulator</h2>
+
+    <p>You don't need a Pixel 9 to test. Android Studio 2023.3.1 Canary and later ship a 16 KB emulator image. Here's how to set it up:</p>
+
+    <div class="code-wrap">
+      <div class="code-bar">
+        <div class="code-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div>
+        <span class="code-lang">Android Studio — AVD Manager</span>
+      </div>
+      <pre><span class="c"># In AVD Manager, create a new device:</span>
+<span class="c"># Device: Pixel 8 Pro (or any ARM64 device)</span>
+<span class="c"># System Image: Android 15 (API 35), ARM64 — "16K Page Size" variant</span>
+<span class="c"># This image emulates the 16 KB page size environment</span>
+
+<span class="c"># Or via command line with avdmanager:</span>
+$ <span class="fn">avdmanager</span> create avd \
+    --name <span class="s">"16kb_test"</span> \
+    --package <span class="s">"system-images;android-35;google_apis;arm64-v8a_16k"</span> \
+    --device <span class="s">"pixel_8_pro"</span></pre>
+    </div>
+
+    <div class="callout callout-ok">
+      <strong>Quick win.</strong> Install your APK on the 16 KB emulator before doing anything else. If it launches without crashing, you may already be compliant. If it crashes on startup with a <code>dlopen failed</code> error, you now know exactly which <code>.so</code> file to fix first.
+    </div>
+
+    <h2>The full checklist — step by step</h2>
+
+    <p>Here's the complete action plan in order of priority:</p>
+
+    <div class="code-wrap">
+      <div class="code-bar">
+        <div class="code-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div>
+        <span class="code-lang">Action checklist</span>
+      </div>
+      <pre><span class="c">## Step 1 — Upgrade React Native</span>
+<span class="k">target</span>: RN <span class="n">0.76</span>+  (includes updated Hermes + NDK config)
+<span class="fn">npx</span> react-native upgrade
+
+<span class="c">## Step 2 — Update NDK in local.properties</span>
+<span class="v">ndk.dir</span>=/path/to/ndk/<span class="n">26.3</span>+  (r26b or later required)
+
+<span class="c">## Step 3 — Enable the lint check</span>
+<span class="c"># In android/app/build.gradle:</span>
+lint { enable <span class="s">"NonCompatibleWith16KbPageSizes"</span> }
+
+<span class="c">## Step 4 — Scan your .so files</span>
+<span class="fn">readelf</span> -l android/app/build/intermediates/**/*.so \
+  | <span class="fn">grep</span> <span class="s">"Align"</span>
+<span class="c"># All must show 0x4000 (16384) not 0x1000 (4096)</span>
+
+<span class="c">## Step 5 — Update all native dependencies</span>
+<span class="fn">npx</span> npm-check-updates -u
+<span class="fn">npm</span> install
+
+<span class="c">## Step 6 — Fix your own NDK modules (CMakeLists.txt)</span>
+<span class="s">"-Wl,-z,max-page-size=16384"</span>
+
+<span class="c">## Step 7 — Test on 16 KB AVD</span>
+<span class="fn">npx</span> react-native run-android --deviceId=emulator-5554
+
+<span class="c">## Step 8 — Submit to Play Console</span>
+<span class="c"># Play Console now runs 16KB compatibility check automatically</span></pre>
+    </div>
+
+    <h2>Performance impact — is it actually faster?</h2>
+
+    <p>Yes, and the gains are measurable. On Pixel 9 hardware (16 KB native), Google reports:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Metric</th><th>4 KB pages</th><th>16 KB pages</th><th>Delta</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>App cold start time</td><td>~920 ms</td><td>~810 ms</td><td><span class="badge badge-green">~12% faster</span></td></tr>
+          <tr><td>TLB miss rate (library load)</td><td>baseline</td><td>–</td><td><span class="badge badge-green">~75% fewer</span></td></tr>
+          <tr><td>Library load I/O operations</td><td>N pages</td><td>N÷4 pages</td><td><span class="badge badge-green">4× fewer ops</span></td></tr>
+          <tr><td>Binary size on disk</td><td>smaller</td><td>slightly larger</td><td><span class="badge badge-yellow">+2–5% APK size</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The APK size increase is real but minimal — ELF segment padding rounds up to the next 16 KB boundary instead of 4 KB, so the binary alignment sections are slightly larger. In practice this adds a few hundred KB to most React Native apps.</p>
+
+    <h2>Common mistakes to avoid</h2>
+
+    <div class="callout callout-danger">
+      <strong>Mistake 1 — Assuming upgrading RN is enough.</strong> React Native core is compatible, but every third-party library with native code must be individually verified. One non-compliant <code>.so</code> file crashes the entire app.
+    </div>
+
+    <div class="callout callout-warn">
+      <strong>Mistake 2 — Ignoring the deadline because your current users don't have Pixel 9.</strong> Google Play enforces the compatibility check at <em>submission time</em>. If your AAB fails the check, the update is rejected — regardless of your target market.
+    </div>
+
+    <div class="callout callout-warn">
+      <strong>Mistake 3 — Using an old NDK.</strong> NDK versions before r26b had linker bugs that could produce incorrectly aligned binaries even with the correct flags. Always use the latest stable NDK.
+    </div>
+
+    <h2>Conclusion</h2>
+
+    <p>The 16 KB page size change is one of the most impactful low-level Android changes in years — but the path forward for React Native developers is clear. Upgrade to RN 0.76+, update your NDK, scan your dependencies, and test on a 16 KB emulator before the November 1, 2025 deadline.</p>
+
+    <p>The good news: for most apps using popular, actively maintained libraries, the bulk of the work is already done by the library maintainers. Your job is to upgrade, verify, and ship. The apps that get caught are the ones with old pinned dependency versions, unmaintained native modules, or custom NDK code that hasn't been touched in years.</p>
+
+    <p>Start the audit now. Don't leave it for October.</p>
+
+  </div>
+
+  <div class="clap-bar">
+    <button type="button" class="clap-btn" onclick="this.textContent='👏 Clapping...'">👏 Clap</button>
+    <button type="button" class="clap-btn">💬 Respond</button>
+    <span class="share-txt">Share this story</span>
+  </div>
+
+  <div class="tags-row">
+    <span class="tag">React Native</span>
+    <span class="tag">Android</span>
+    <span class="tag">Mobile Development</span>
+    <span class="tag">Android 15</span>
+    <span class="tag">Performance</span>
+    <span class="tag">NDK</span>
+    <span class="tag">Google Play</span>
+    <span class="tag">JavaScript</span>
+  </div>
+
+</div>
+
+</body>
+</html>
